@@ -1,3 +1,4 @@
+import kang.min.gu.convention.constant.DependencyUnitValue
 import kang.min.gu.convention.setJvmTarget
 import org.gradle.api.Plugin
 import org.gradle.api.Project

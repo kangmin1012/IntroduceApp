@@ -1,6 +1,6 @@
 package kang.min.gu.convention
 
-import DependencyUnitValue
+import kang.min.gu.convention.constant.DependencyUnitValue
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalogsExtension

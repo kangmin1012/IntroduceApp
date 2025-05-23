@@ -1,3 +1,5 @@
+package kang.min.gu.convention.constant
+
 object DependencyUnitValue {
     const val implementation = "implementation"
     const val androidTestImplementation = "androidTestImplementation"

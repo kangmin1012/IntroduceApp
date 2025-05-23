@@ -1,6 +1,7 @@
 package kang.min.gu.convention
 
 import com.android.build.api.dsl.ApplicationExtension
+import kang.min.gu.convention.constant.ConfigValue
 
 internal fun ApplicationExtension.configureApplicationBuildType() {
     buildTypes {
@@ -16,14 +17,12 @@ internal fun ApplicationExtension.configureApplicationBuildType() {
 
 internal fun ApplicationExtension.configureApplicationDefault() {
     namespace = "kang.min.gu.introducemyself"
-    compileSdk = 36
 
     defaultConfig {
         applicationId = "kang.min.gu.introducemyself"
-        minSdk = 27
-        targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
+        targetSdk = ConfigValue.TARGET_SDK
+        versionCode = ConfigValue.VERSION_CODE
+        versionName = ConfigValue.VERSION_NAME
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

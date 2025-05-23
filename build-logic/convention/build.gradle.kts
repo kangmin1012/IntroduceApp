@@ -25,6 +25,16 @@ gradlePlugin {
             implementationClass = "AndroidApplicationComposePlugin"
         }
 
+        register("androidFeature") {
+            id = libs.plugins.introduce.android.feature.get().pluginId
+            implementationClass = "AndroidFeaturePlugin"
+        }
+
+        register("androidLibraryCompose") {
+            id = libs.plugins.introduce.android.library.compose.get().pluginId
+            implementationClass = "AndroidLibraryComposePlugin"
+        }
+
         register("androidKotlin") {
             id = libs.plugins.introduce.android.kotlin.get().pluginId
             implementationClass = "AndroidKotlinPlugin"
