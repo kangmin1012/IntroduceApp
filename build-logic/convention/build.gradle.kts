@@ -30,6 +30,11 @@ gradlePlugin {
             implementationClass = "AndroidFeaturePlugin"
         }
 
+        register("androidLibrary") {
+            id = libs.plugins.introduce.android.library.asProvider().get().pluginId
+            implementationClass = "AndroidLibraryPlugin"
+        }
+
         register("androidLibraryCompose") {
             id = libs.plugins.introduce.android.library.compose.get().pluginId
             implementationClass = "AndroidLibraryComposePlugin"
