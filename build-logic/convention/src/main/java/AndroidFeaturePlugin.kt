@@ -1,12 +1,14 @@
 import com.android.build.api.dsl.LibraryExtension
 import kang.min.gu.convention.configBasicOption
 import kang.min.gu.convention.constant.ConfigValue
+import kang.min.gu.convention.constant.DependencyUnitValue
 import kang.min.gu.convention.setJvmTarget
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.getByType
 import org.gradle.kotlin.dsl.configure
+import org.gradle.kotlin.dsl.dependencies
 
 
 internal class AndroidFeaturePlugin : Plugin<Project> {
@@ -40,6 +42,13 @@ internal class AndroidFeaturePlugin : Plugin<Project> {
             }
 
             extensions.setJvmTarget()
+
+            dependencies {
+                DependencyUnitValue.run {
+                    implementation(project(":core:designsystem"))
+                    implementation(project(":core:navigation"))
+                }
+            }
         }
     }
 }

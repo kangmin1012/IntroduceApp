@@ -23,4 +23,5 @@ dependencies {
 
     implementation(projects.feature.profile)
     implementation(projects.core.navigation)
+    implementation(projects.core.designsystem)
 }

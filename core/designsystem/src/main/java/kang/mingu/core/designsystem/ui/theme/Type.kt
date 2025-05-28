@@ -1,4 +1,4 @@
-package kang.min.gu.introducemyself.ui.theme
+package kang.mingu.core.designsystem.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.font.Font

@@ -1,4 +1,4 @@
-package kang.min.gu.introducemyself.ui.theme
+package kang.mingu.core.designsystem.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

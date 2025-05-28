@@ -18,7 +18,7 @@ import androidx.navigation3.runtime.entry
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.ui.NavDisplay
 import kang.min.gu.introducemyself.route.MainTab
-import kang.min.gu.introducemyself.ui.theme.IntroduceMySelfTheme
+import kang.mingu.core.designsystem.ui.theme.IntroduceMySelfTheme
 import kang.mingu.core.navigation.MainTabRoute
 
 private val bottomNavigationItems = MainTab.entries

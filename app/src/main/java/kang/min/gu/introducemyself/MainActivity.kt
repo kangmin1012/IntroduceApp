@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import kang.min.gu.introducemyself.ui.theme.IntroduceMySelfTheme
+import kang.mingu.core.designsystem.ui.theme.IntroduceMySelfTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
