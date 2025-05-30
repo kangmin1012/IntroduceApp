@@ -87,6 +87,5 @@ introduce-android-library = { id = "introduce.android.library"}
 introduce-android-library-compose = { id = "introduce.android.library.compose"}
 introduce-android-feature = { id = "introduce.android.feature"}
 introduce-android-kotlin = { id = "introduce.android.kotlin" }
-introduce-hilt-android = { id = "introduce.hilt.android" }
 introduce-hilt-kotlin = { id = "introduce.hilt.kotlin" }
 introduce-network = { id = "introduce.network" }

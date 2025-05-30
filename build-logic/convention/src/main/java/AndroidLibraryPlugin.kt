@@ -1,5 +1,6 @@
 import com.android.build.api.dsl.LibraryExtension
 import kang.min.gu.convention.configBasicOption
+import kang.min.gu.convention.configureHilt
 import kang.min.gu.convention.constant.ConfigValue
 import kang.min.gu.convention.setJvmTarget
 import org.gradle.api.Plugin
@@ -36,6 +37,7 @@ internal class AndroidLibraryPlugin : Plugin<Project> {
                 configBasicOption()
             }
 
+            configureHilt()
             extensions.setJvmTarget()
         }
     }

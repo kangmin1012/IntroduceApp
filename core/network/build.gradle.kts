@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.introduce.android.library)
     alias(libs.plugins.introduce.network)
-    alias(libs.plugins.introduce.hilt.android)
 }
 
 android {

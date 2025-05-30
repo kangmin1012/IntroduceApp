@@ -2,6 +2,7 @@ import com.android.build.api.dsl.ApplicationExtension
 import kang.min.gu.convention.configBasicOption
 import kang.min.gu.convention.configureApplicationBuildType
 import kang.min.gu.convention.configureApplicationDefault
+import kang.min.gu.convention.configureHilt
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalogsExtension
@@ -23,6 +24,8 @@ internal class AndroidApplicationPlugin : Plugin<Project> {
                 configureApplicationBuildType()
                 configBasicOption()
             }
+
+            configureHilt()
         }
     }
 }
