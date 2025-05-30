@@ -14,12 +14,15 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.viewmodel.navigation3.rememberViewModelStoreNavEntryDecorator
 import androidx.navigation3.runtime.entry
 import androidx.navigation3.runtime.entryProvider
+import androidx.navigation3.runtime.rememberSavedStateNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import kang.min.gu.introducemyself.route.MainTab
 import kang.mingu.core.designsystem.ui.theme.IntroduceMySelfTheme
 import kang.mingu.core.navigation.MainTabRoute
+import kangmingu.feature.profile.ProfileScreen
 
 private val bottomNavigationItems = MainTab.entries
 
@@ -39,6 +42,9 @@ fun MainScreen() {
                         selected = backstack.lastOrNull() == item.route,
                         onClick = {
                             backstack.add(item.route)
+                            backstack.removeAll { backstackRoute ->
+                                backstackRoute != item.route
+                            }
                         },
                         icon = {
                             Icon(
@@ -58,12 +64,16 @@ fun MainScreen() {
     ) { innerPadding ->
         NavDisplay(
              backstack,
+            entryDecorators = listOf(
+                rememberSavedStateNavEntryDecorator(),
+                rememberViewModelStoreNavEntryDecorator()
+            ),
             onBack = {
                 backstack.removeLastOrNull()
             },
             entryProvider = entryProvider {
                 entry<MainTabRoute.Profile> {
-
+                    ProfileScreen()
                 }
                 entry<MainTabRoute.Career> {
 

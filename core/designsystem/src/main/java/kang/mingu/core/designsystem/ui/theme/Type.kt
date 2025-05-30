@@ -4,7 +4,7 @@ import androidx.compose.material3.Typography
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import kang.min.gu.introducemyself.R
+import kang.mingu.core.designsystem.R
 
 private val BaseTypography = Typography()
 
