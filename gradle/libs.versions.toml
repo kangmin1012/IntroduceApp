@@ -1,6 +1,6 @@
 [versions]
-agp = "8.10.0"
-kotlin = "2.0.21"
+agp = "8.10.1"
+kotlin = "2.1.21"
 coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -9,14 +9,15 @@ lifecycleRuntimeKtx = "2.9.0"
 activityCompose = "1.10.1"
 composeBom = "2025.05.01"
 ktx = "2.9.0"
-koin = "4.0.3"
 nav3Core = "1.0.0-alpha02"
 nav3ViewModel = "1.0.0-alpha01"
 kotlinSerialization = "2.1.21"
 kotlinxSerializationCore = "1.8.1"
-jetbrainsKotlinJvm = "2.0.21"
+jetbrainsKotlinJvm = "2.1.21"
 appcompat = "1.7.0"
 material = "1.12.0"
+hilt = "2.56.2"
+ksp = "2.1.21-2.0.1"
 
 [libraries]
 android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
@@ -40,9 +41,9 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 
 viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "ktx"}
 
-koin = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
-koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
-koin-compose-navigation = { group = "io.insert-koin", name = "koin-androidx-compose-navigation", version.ref = "koin"}
+hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt"}
+hilt-core = { module = "com.google.dagger:hilt-core", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 
 androidx-navigation3-runtime = { module = "androidx.navigation3:navigation3-runtime", version.ref = "nav3Core" }
 androidx-navigation3-ui = { module = "androidx.navigation3:navigation3-ui", version.ref = "nav3Core" }
@@ -53,11 +54,6 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [bundles]
-koin = [
-  "koin",
-  "koin-compose",
-  "koin-compose-navigation"
-]
 
 navigation3 = [
   "androidx-navigation3-runtime",
@@ -77,6 +73,8 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinSerialization"}
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
+hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 # Plugins defined by this project
 introduce-android-application = { id = "introduce.android.application" }
@@ -85,4 +83,5 @@ introduce-android-library = { id = "introduce.android.library"}
 introduce-android-library-compose = { id = "introduce.android.library.compose"}
 introduce-android-feature = { id = "introduce.android.feature"}
 introduce-android-kotlin = { id = "introduce.android.kotlin" }
-introduce-koin = { id = "introduce.koin" }
+introduce-hilt-android = { id = "introduce.hilt.android" }
+introduce-hilt-kotlin = { id = "introduce.hilt.kotlin" }

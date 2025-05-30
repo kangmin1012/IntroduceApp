@@ -45,9 +45,14 @@ gradlePlugin {
             implementationClass = "AndroidKotlinPlugin"
         }
 
-        register("koin") {
-            id = libs.plugins.introduce.koin.get().pluginId
-            implementationClass = "KoinPlugin"
+        register("hiltAndroid") {
+            id = libs.plugins.introduce.hilt.android.get().pluginId
+            implementationClass = "HiltAndroidPlugin"
+        }
+
+        register("hiltKotlin") {
+            id = libs.plugins.introduce.hilt.kotlin.get().pluginId
+            implementationClass = "HiltKotlinPlugin"
         }
     }
 }

@@ -19,7 +19,6 @@ internal class AndroidFeaturePlugin : Plugin<Project> {
             with(pluginManager) {
                 apply(libs.findPlugin("android.library").get().get().pluginId)
                 apply(libs.findPlugin("introduce.android.kotlin").get().get().pluginId)
-                apply(libs.findPlugin("introduce.koin").get().get().pluginId)
             }
 
 
