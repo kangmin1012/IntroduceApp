@@ -18,6 +18,7 @@ appcompat = "1.7.0"
 material = "1.12.0"
 hilt = "2.56.2"
 ksp = "2.1.21-2.0.1"
+retrofit = "3.0.0"
 
 [libraries]
 android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
@@ -53,6 +54,9 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
+retrofit-core = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-kotlin-serialization = { module = "com.squareup.retrofit2:converter-kotlinx-serialization", version.ref = "retrofit" }
+
 [bundles]
 
 navigation3 = [
@@ -85,3 +89,4 @@ introduce-android-feature = { id = "introduce.android.feature"}
 introduce-android-kotlin = { id = "introduce.android.kotlin" }
 introduce-hilt-android = { id = "introduce.hilt.android" }
 introduce-hilt-kotlin = { id = "introduce.hilt.kotlin" }
+introduce-network = { id = "introduce.network" }
