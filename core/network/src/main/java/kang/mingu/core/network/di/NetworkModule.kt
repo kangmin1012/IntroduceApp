@@ -5,6 +5,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import dagger.multibindings.IntoSet
+import kang.mingu.appconfig.BuildConfig
+import kang.mingu.appconfig.IntroduceAppBuildConfig
 import kang.mingu.core.network.IntroduceAppNetwork
 import kotlinx.serialization.json.Json
 import okhttp3.Interceptor
@@ -36,11 +38,14 @@ object NetworkModule {
     @Provides
     @Singleton
     @IntoSet
-    fun provideHeaderInterceptor(): Interceptor = object : Interceptor {
+    fun provideHeaderInterceptor(
+        introduceAppNetwork: IntroduceAppBuildConfig
+    ): Interceptor = object : Interceptor {
         override fun intercept(chain: Interceptor.Chain): Response {
             val newBuilder = chain.request().newBuilder().apply {
                 header("Accept", "application/vnd.github+json")
                 header("X-GitHub-Api-Version", "2022-11-28")
+                header("Authorization", BuildConfig.GITHUB_TOKEN)
             }
 
             return chain.proceed(newBuilder.build())

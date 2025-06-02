@@ -1,14 +1,13 @@
 plugins {
     alias(libs.plugins.introduce.android.library)
-    alias(libs.plugins.introduce.network)
 }
 
 android {
-    namespace = "kang.mingu.core.network"
+    namespace = "kang.mingu.data"
 }
 
 dependencies {
-    implementation(projects.appConfig)
+    implementation(projects.core.network)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
