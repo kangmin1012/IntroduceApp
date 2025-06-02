@@ -1,5 +1,6 @@
 import com.android.build.api.dsl.LibraryExtension
 import kang.min.gu.convention.configBasicOption
+import kang.min.gu.convention.configureHilt
 import kang.min.gu.convention.constant.ConfigValue
 import kang.min.gu.convention.constant.DependencyUnitValue
 import kang.min.gu.convention.setJvmTarget
@@ -38,6 +39,7 @@ internal class AndroidFeaturePlugin : Plugin<Project> {
                 }
 
                 configBasicOption()
+                configureHilt()
             }
 
             extensions.setJvmTarget()
@@ -46,6 +48,7 @@ internal class AndroidFeaturePlugin : Plugin<Project> {
                 DependencyUnitValue.run {
                     implementation(project(":core:designsystem"))
                     implementation(project(":core:navigation"))
+                    implementation(project(":core:ui"))
                 }
             }
         }

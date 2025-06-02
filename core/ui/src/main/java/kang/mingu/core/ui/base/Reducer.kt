@@ -1,4 +1,4 @@
-package kang.min.gu.introducemyself.base
+package kang.mingu.core.ui.base
 
 interface Reducer<State : Reducer.ViewState, Event : Reducer.ViewEvent, Effect : Reducer.ViewEffect> {
     interface ViewState
