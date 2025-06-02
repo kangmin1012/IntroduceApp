@@ -54,5 +54,10 @@ gradlePlugin {
             id = libs.plugins.introduce.network.get().pluginId
             implementationClass = "NetworkPlugin"
         }
+
+        register("kotlinLibrary") {
+            id = libs.plugins.introduce.kotlin.library.get().pluginId
+            implementationClass = "KotlinLibraryPlugin"
+        }
     }
 }

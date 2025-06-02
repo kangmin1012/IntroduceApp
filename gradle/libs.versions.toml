@@ -84,6 +84,7 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 introduce-android-application = { id = "introduce.android.application" }
 introduce-android-application-compose = { id = "introduce.android.application.compose" }
 introduce-android-library = { id = "introduce.android.library"}
+introduce-kotlin-library = { id = "introduce.kotlin.library" }
 introduce-android-library-compose = { id = "introduce.android.library.compose"}
 introduce-android-feature = { id = "introduce.android.feature"}
 introduce-android-kotlin = { id = "introduce.android.kotlin" }
