@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.introduce.android.library)
+    alias(libs.plugins.introduce.network)
 }
 
 android {
@@ -8,6 +9,7 @@ android {
 
 dependencies {
     implementation(projects.core.network)
+    implementation(projects.appConfig)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
