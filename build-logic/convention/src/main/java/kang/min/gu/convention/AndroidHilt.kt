@@ -11,6 +11,7 @@ internal fun Project.configureHilt() {
 
     dependencies {
         "implementation"(findLibrary("hilt"))
+        "implementation"(findLibrary("hilt.navigation.compose"))
         "ksp"(findLibrary("hilt.compiler"))
     }
 }

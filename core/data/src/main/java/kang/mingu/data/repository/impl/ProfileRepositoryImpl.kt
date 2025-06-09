@@ -6,7 +6,7 @@ import kang.mingu.data.mapper.toModel
 import kang.mingu.data.repository.ProfileRepository
 import javax.inject.Inject
 
-internal class ProfileRepositoryImpl @Inject constructor(
+class ProfileRepositoryImpl @Inject constructor(
     val profileApi: ProfileApi
 ) : ProfileRepository {
 

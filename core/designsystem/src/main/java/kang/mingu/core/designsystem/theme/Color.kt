@@ -1,4 +1,4 @@
-package kang.mingu.core.designsystem.ui.theme
+package kang.mingu.core.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 

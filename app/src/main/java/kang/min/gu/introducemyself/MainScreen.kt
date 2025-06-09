@@ -20,7 +20,7 @@ import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberSavedStateNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import kang.min.gu.introducemyself.route.MainTab
-import kang.mingu.core.designsystem.ui.theme.IntroduceMySelfTheme
+import kang.mingu.core.designsystem.theme.IntroduceMySelfTheme
 import kang.mingu.core.navigation.MainTabRoute
 import kangmingu.feature.profile.ProfileScreen
 

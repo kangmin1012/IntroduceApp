@@ -10,7 +10,7 @@ import javax.inject.Inject
 
 
 @HiltViewModel
-internal class ProfileViewModel @Inject constructor(
+class ProfileViewModel @Inject constructor(
     private val getProfileUseCase: GetProfileUseCase
 ) : BaseViewModel<ProfileReducer.ProfileScreenState, ProfileReducer.ProfileScreenEvent, ProfileReducer.ProfileScreenEffect>(
     initialState = ProfileReducer.ProfileScreenState(profileImage = ""),

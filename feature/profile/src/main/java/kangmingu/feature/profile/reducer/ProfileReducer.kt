@@ -3,7 +3,7 @@ package kangmingu.feature.profile.reducer
 import androidx.compose.runtime.Immutable
 import kang.mingu.core.ui.base.Reducer
 
-internal class ProfileReducer : Reducer<ProfileReducer.ProfileScreenState, ProfileReducer.ProfileScreenEvent, ProfileReducer.ProfileScreenEffect> {
+class ProfileReducer : Reducer<ProfileReducer.ProfileScreenState, ProfileReducer.ProfileScreenEvent, ProfileReducer.ProfileScreenEffect> {
     @Immutable
     data class ProfileScreenState(
         val profileImage: String

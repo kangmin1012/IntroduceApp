@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import dagger.hilt.android.AndroidEntryPoint
-import kang.mingu.core.designsystem.ui.theme.IntroduceMySelfTheme
+import kang.mingu.core.designsystem.theme.IntroduceMySelfTheme
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
