@@ -11,17 +11,24 @@ internal class ProfileReducer : Reducer<ProfileReducer.ProfileScreenState, Profi
 
     sealed interface ProfileScreenEvent : Reducer.ViewEvent {
         data class LoadProfile(val profileImage: String) : ProfileScreenEvent
+        data class SendToastMessage(val message: String) : ProfileScreenEvent
     }
 
-    sealed interface ProfileScreenEffect : Reducer.ViewEffect
+    sealed interface ProfileScreenEffect : Reducer.ViewEffect {
+        data class ShowToast(val message: String) : ProfileScreenEffect
+    }
 
     override fun reduce(
         previousState: ProfileScreenState,
         event: ProfileScreenEvent
     ): Pair<ProfileScreenState, ProfileScreenEffect?> {
-        when(event) {
+        return when(event) {
             is ProfileScreenEvent.LoadProfile -> {
-                return ProfileScreenState(profileImage = event.profileImage) to null
+                ProfileScreenState(profileImage = event.profileImage) to null
+            }
+
+            is ProfileScreenEvent.SendToastMessage -> {
+                previousState to ProfileScreenEffect.ShowToast(event.message)
             }
         }
     }
