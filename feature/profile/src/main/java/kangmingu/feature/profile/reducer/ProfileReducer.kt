@@ -1,16 +1,17 @@
 package kangmingu.feature.profile.reducer
 
 import androidx.compose.runtime.Immutable
+import kang.mingu.core.model.profile.Profile
 import kang.mingu.core.ui.base.Reducer
 
 class ProfileReducer : Reducer<ProfileReducer.ProfileScreenState, ProfileReducer.ProfileScreenEvent, ProfileReducer.ProfileScreenEffect> {
     @Immutable
     data class ProfileScreenState(
-        val profileImage: String
+        val profile: Profile
     ) : Reducer.ViewState
 
     sealed interface ProfileScreenEvent : Reducer.ViewEvent {
-        data class LoadProfile(val profileImage: String) : ProfileScreenEvent
+        data class LoadProfile(val profile: Profile) : ProfileScreenEvent
         data class SendToastMessage(val message: String) : ProfileScreenEvent
     }
 
@@ -24,7 +25,7 @@ class ProfileReducer : Reducer<ProfileReducer.ProfileScreenState, ProfileReducer
     ): Pair<ProfileScreenState, ProfileScreenEffect?> {
         return when(event) {
             is ProfileScreenEvent.LoadProfile -> {
-                ProfileScreenState(profileImage = event.profileImage) to null
+                ProfileScreenState(event.profile) to null
             }
 
             is ProfileScreenEvent.SendToastMessage -> {

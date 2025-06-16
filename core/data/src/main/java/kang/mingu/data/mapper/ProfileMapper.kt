@@ -5,6 +5,7 @@ import kang.mingu.data.model.ProfileResponse
 
 internal fun ProfileResponse.toModel(): Profile {
     return Profile(
-        imageUrl = profileUrl
+        imageUrl = profileUrl,
+        name = name
     )
 }

@@ -6,5 +6,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class ProfileResponse(
     @SerialName("avatar_url")
-    val profileUrl: String = ""
+    val profileUrl: String = "",
+    @SerialName("name")
+    val name: String = ""
 )
