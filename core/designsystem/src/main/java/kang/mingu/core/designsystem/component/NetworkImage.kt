@@ -1,10 +1,13 @@
 package kang.mingu.core.designsystem.component
 
+import android.util.Log
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.ColorPainter
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
@@ -16,6 +19,7 @@ import coil3.compose.AsyncImage
 import coil3.compose.AsyncImagePreviewHandler
 import coil3.compose.LocalAsyncImagePreviewHandler
 import coil3.request.ImageRequest
+import coil3.request.crossfade
 import kang.mingu.core.designsystem.theme.IntroduceMySelfTheme
 
 @OptIn(ExperimentalCoilApi::class)
@@ -23,6 +27,7 @@ import kang.mingu.core.designsystem.theme.IntroduceMySelfTheme
 fun NetworkImage(
     modifier: Modifier = Modifier,
     imageUrl: String,
+    placeHolder: Painter? = null,
     contentScale: ContentScale = ContentScale.Crop,
     contentDescription: String? = null
 ) {
@@ -34,7 +39,13 @@ fun NetworkImage(
         AsyncImage(
             model = ImageRequest.Builder(LocalContext.current)
                 .data(imageUrl)
+                .crossfade(true)
                 .build(),
+            placeholder = placeHolder,
+            error = placeHolder,
+            onError = {
+                Log.e("ImageLoad", "Failed to load image: ${it.result.throwable.message}")
+            },
             contentDescription = contentDescription,
             contentScale = contentScale,
             modifier = modifier

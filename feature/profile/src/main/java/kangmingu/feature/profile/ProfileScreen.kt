@@ -13,6 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -63,12 +64,13 @@ private fun ProfileContent(
 
         NetworkImage(
             imageUrl = profileImage,
-            modifier = Modifier.size(30.dp).clip(CircleShape)
+            modifier = Modifier.size(128.dp).clip(CircleShape),
+            placeHolder = painterResource(kang.mingu.core.designsystem.R.drawable.img_profile_placeholder)
         )
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 private fun ProfileContentPreview() {
     IntroduceMySelfTheme {

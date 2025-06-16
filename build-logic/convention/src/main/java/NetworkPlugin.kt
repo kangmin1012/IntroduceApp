@@ -9,6 +9,7 @@ internal class NetworkPlugin : Plugin<Project> {
             dependencies {
                 "implementation"(findLibrary("retrofit.core"))
                 "implementation"(findLibrary("retrofit.kotlin.serialization"))
+                "implementation"(findLibrary("retrofit.logging.interceptor"))
             }
         }
     }
