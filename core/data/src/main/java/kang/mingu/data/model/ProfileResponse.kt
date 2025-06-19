@@ -8,5 +8,11 @@ data class ProfileResponse(
     @SerialName("avatar_url")
     val profileUrl: String = "",
     @SerialName("name")
-    val name: String = ""
+    val name: String = "",
+    @SerialName("bio")
+    val bio: String = "",
+    @SerialName("company")
+    val company: String = "",
+    @SerialName("location")
+    val location: String = ""
 )

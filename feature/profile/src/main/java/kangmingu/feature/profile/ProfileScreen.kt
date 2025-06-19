@@ -82,6 +82,16 @@ private fun ProfileContent(
             color = MaterialTheme.colorScheme.onBackground,
             modifier = Modifier.padding(top = 6.dp)
         )
+        Text(
+            text = profile.job,
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onBackground
+        )
+        Text(
+            text = profile.location,
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onBackground
+        )
     }
 }
 
@@ -102,7 +112,9 @@ private class ProfilePreviewProvider : PreviewParameterProvider<Profile> {
         get() = sequenceOf(
             Profile(
                 imageUrl = "",
-                name = "Kang Min gu"
+                name = "Kang Min gu",
+                job = "Android",
+                location = "Seoul"
             )
         )
 }
